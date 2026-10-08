@@ -1,0 +1,1381 @@
+{
+ "ok": true,
+ "source": "int a = 10;\nint b = 20;\nint c = a + b * 2;\nprint(c);",
+ "tokens": [
+  {
+   "id": "tok_0",
+   "type": "KEYWORD",
+   "lexeme": "int",
+   "span": {
+    "start": 0,
+    "end": 3,
+    "line": 1,
+    "col": 1,
+    "end_line": 1,
+    "end_col": 4
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_1",
+   "type": "IDENTIFIER",
+   "lexeme": "a",
+   "span": {
+    "start": 4,
+    "end": 5,
+    "line": 1,
+    "col": 5,
+    "end_line": 1,
+    "end_col": 6
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_2",
+   "type": "OPERATOR",
+   "lexeme": "=",
+   "span": {
+    "start": 6,
+    "end": 7,
+    "line": 1,
+    "col": 7,
+    "end_line": 1,
+    "end_col": 8
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_3",
+   "type": "INT_LIT",
+   "lexeme": "10",
+   "span": {
+    "start": 8,
+    "end": 10,
+    "line": 1,
+    "col": 9,
+    "end_line": 1,
+    "end_col": 11
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_4",
+   "type": "DELIMITER",
+   "lexeme": ";",
+   "span": {
+    "start": 10,
+    "end": 11,
+    "line": 1,
+    "col": 11,
+    "end_line": 1,
+    "end_col": 12
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_5",
+   "type": "KEYWORD",
+   "lexeme": "int",
+   "span": {
+    "start": 12,
+    "end": 15,
+    "line": 2,
+    "col": 1,
+    "end_line": 2,
+    "end_col": 4
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_6",
+   "type": "IDENTIFIER",
+   "lexeme": "b",
+   "span": {
+    "start": 16,
+    "end": 17,
+    "line": 2,
+    "col": 5,
+    "end_line": 2,
+    "end_col": 6
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_7",
+   "type": "OPERATOR",
+   "lexeme": "=",
+   "span": {
+    "start": 18,
+    "end": 19,
+    "line": 2,
+    "col": 7,
+    "end_line": 2,
+    "end_col": 8
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_8",
+   "type": "INT_LIT",
+   "lexeme": "20",
+   "span": {
+    "start": 20,
+    "end": 22,
+    "line": 2,
+    "col": 9,
+    "end_line": 2,
+    "end_col": 11
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_9",
+   "type": "DELIMITER",
+   "lexeme": ";",
+   "span": {
+    "start": 22,
+    "end": 23,
+    "line": 2,
+    "col": 11,
+    "end_line": 2,
+    "end_col": 12
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_10",
+   "type": "KEYWORD",
+   "lexeme": "int",
+   "span": {
+    "start": 24,
+    "end": 27,
+    "line": 3,
+    "col": 1,
+    "end_line": 3,
+    "end_col": 4
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_11",
+   "type": "IDENTIFIER",
+   "lexeme": "c",
+   "span": {
+    "start": 28,
+    "end": 29,
+    "line": 3,
+    "col": 5,
+    "end_line": 3,
+    "end_col": 6
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_12",
+   "type": "OPERATOR",
+   "lexeme": "=",
+   "span": {
+    "start": 30,
+    "end": 31,
+    "line": 3,
+    "col": 7,
+    "end_line": 3,
+    "end_col": 8
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_13",
+   "type": "IDENTIFIER",
+   "lexeme": "a",
+   "span": {
+    "start": 32,
+    "end": 33,
+    "line": 3,
+    "col": 9,
+    "end_line": 3,
+    "end_col": 10
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_14",
+   "type": "OPERATOR",
+   "lexeme": "+",
+   "span": {
+    "start": 34,
+    "end": 35,
+    "line": 3,
+    "col": 11,
+    "end_line": 3,
+    "end_col": 12
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_15",
+   "type": "IDENTIFIER",
+   "lexeme": "b",
+   "span": {
+    "start": 36,
+    "end": 37,
+    "line": 3,
+    "col": 13,
+    "end_line": 3,
+    "end_col": 14
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_16",
+   "type": "OPERATOR",
+   "lexeme": "*",
+   "span": {
+    "start": 38,
+    "end": 39,
+    "line": 3,
+    "col": 15,
+    "end_line": 3,
+    "end_col": 16
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_17",
+   "type": "INT_LIT",
+   "lexeme": "2",
+   "span": {
+    "start": 40,
+    "end": 41,
+    "line": 3,
+    "col": 17,
+    "end_line": 3,
+    "end_col": 18
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_18",
+   "type": "DELIMITER",
+   "lexeme": ";",
+   "span": {
+    "start": 41,
+    "end": 42,
+    "line": 3,
+    "col": 18,
+    "end_line": 3,
+    "end_col": 19
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_19",
+   "type": "KEYWORD",
+   "lexeme": "print",
+   "span": {
+    "start": 43,
+    "end": 48,
+    "line": 4,
+    "col": 1,
+    "end_line": 4,
+    "end_col": 6
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_20",
+   "type": "DELIMITER",
+   "lexeme": "(",
+   "span": {
+    "start": 48,
+    "end": 49,
+    "line": 4,
+    "col": 6,
+    "end_line": 4,
+    "end_col": 7
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_21",
+   "type": "IDENTIFIER",
+   "lexeme": "c",
+   "span": {
+    "start": 49,
+    "end": 50,
+    "line": 4,
+    "col": 7,
+    "end_line": 4,
+    "end_col": 8
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_22",
+   "type": "DELIMITER",
+   "lexeme": ")",
+   "span": {
+    "start": 50,
+    "end": 51,
+    "line": 4,
+    "col": 8,
+    "end_line": 4,
+    "end_col": 9
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_23",
+   "type": "DELIMITER",
+   "lexeme": ";",
+   "span": {
+    "start": 51,
+    "end": 52,
+    "line": 4,
+    "col": 9,
+    "end_line": 4,
+    "end_col": 10
+   },
+   "origin": []
+  },
+  {
+   "id": "tok_24",
+   "type": "EOF",
+   "lexeme": "",
+   "span": {
+    "start": 52,
+    "end": 52,
+    "line": 4,
+    "col": 10,
+    "end_line": 4,
+    "end_col": 10
+   },
+   "origin": []
+  }
+ ],
+ "ast": {
+  "id": "ast_12",
+  "kind": "Program",
+  "span": {
+   "start": 0,
+   "end": 52,
+   "line": 1,
+   "col": 1,
+   "end_line": 4,
+   "end_col": 10
+  },
+  "origin": [],
+  "children": [
+   {
+    "id": "ast_1",
+    "kind": "Decl",
+    "span": {
+     "start": 0,
+     "end": 11,
+     "line": 1,
+     "col": 1,
+     "end_line": 1,
+     "end_col": 12
+    },
+    "origin": [
+     "tok_0",
+     "tok_1",
+     "tok_2",
+     "tok_4"
+    ],
+    "children": [
+     {
+      "id": "ast_0",
+      "kind": "Literal",
+      "span": {
+       "start": 8,
+       "end": 10,
+       "line": 1,
+       "col": 9,
+       "end_line": 1,
+       "end_col": 11
+      },
+      "origin": [
+       "tok_3"
+      ],
+      "children": [],
+      "operator": null,
+      "var_type": null,
+      "name": null,
+      "value": "10",
+      "lit_type": "int",
+      "type": "int",
+      "symbol": null,
+      "error": false
+     }
+    ],
+    "operator": null,
+    "var_type": "int",
+    "name": "a",
+    "value": null,
+    "lit_type": null,
+    "type": null,
+    "symbol": "sym_a_global",
+    "error": false
+   },
+   {
+    "id": "ast_3",
+    "kind": "Decl",
+    "span": {
+     "start": 12,
+     "end": 23,
+     "line": 2,
+     "col": 1,
+     "end_line": 2,
+     "end_col": 12
+    },
+    "origin": [
+     "tok_5",
+     "tok_6",
+     "tok_7",
+     "tok_9"
+    ],
+    "children": [
+     {
+      "id": "ast_2",
+      "kind": "Literal",
+      "span": {
+       "start": 20,
+       "end": 22,
+       "line": 2,
+       "col": 9,
+       "end_line": 2,
+       "end_col": 11
+      },
+      "origin": [
+       "tok_8"
+      ],
+      "children": [],
+      "operator": null,
+      "var_type": null,
+      "name": null,
+      "value": "20",
+      "lit_type": "int",
+      "type": "int",
+      "symbol": null,
+      "error": false
+     }
+    ],
+    "operator": null,
+    "var_type": "int",
+    "name": "b",
+    "value": null,
+    "lit_type": null,
+    "type": null,
+    "symbol": "sym_b_global",
+    "error": false
+   },
+   {
+    "id": "ast_9",
+    "kind": "Decl",
+    "span": {
+     "start": 24,
+     "end": 42,
+     "line": 3,
+     "col": 1,
+     "end_line": 3,
+     "end_col": 19
+    },
+    "origin": [
+     "tok_10",
+     "tok_11",
+     "tok_12",
+     "tok_18"
+    ],
+    "children": [
+     {
+      "id": "ast_8",
+      "kind": "Binary",
+      "span": {
+       "start": 32,
+       "end": 41,
+       "line": 3,
+       "col": 9,
+       "end_line": 3,
+       "end_col": 18
+      },
+      "origin": [
+       "tok_14"
+      ],
+      "children": [
+       {
+        "id": "ast_4",
+        "kind": "Var",
+        "span": {
+         "start": 32,
+         "end": 33,
+         "line": 3,
+         "col": 9,
+         "end_line": 3,
+         "end_col": 10
+        },
+        "origin": [
+         "tok_13"
+        ],
+        "children": [],
+        "operator": null,
+        "var_type": null,
+        "name": "a",
+        "value": null,
+        "lit_type": null,
+        "type": "int",
+        "symbol": "sym_a_global",
+        "error": false
+       },
+       {
+        "id": "ast_7",
+        "kind": "Binary",
+        "span": {
+         "start": 36,
+         "end": 41,
+         "line": 3,
+         "col": 13,
+         "end_line": 3,
+         "end_col": 18
+        },
+        "origin": [
+         "tok_16"
+        ],
+        "children": [
+         {
+          "id": "ast_5",
+          "kind": "Var",
+          "span": {
+           "start": 36,
+           "end": 37,
+           "line": 3,
+           "col": 13,
+           "end_line": 3,
+           "end_col": 14
+          },
+          "origin": [
+           "tok_15"
+          ],
+          "children": [],
+          "operator": null,
+          "var_type": null,
+          "name": "b",
+          "value": null,
+          "lit_type": null,
+          "type": "int",
+          "symbol": "sym_b_global",
+          "error": false
+         },
+         {
+          "id": "ast_6",
+          "kind": "Literal",
+          "span": {
+           "start": 40,
+           "end": 41,
+           "line": 3,
+           "col": 17,
+           "end_line": 3,
+           "end_col": 18
+          },
+          "origin": [
+           "tok_17"
+          ],
+          "children": [],
+          "operator": null,
+          "var_type": null,
+          "name": null,
+          "value": "2",
+          "lit_type": "int",
+          "type": "int",
+          "symbol": null,
+          "error": false
+         }
+        ],
+        "operator": "*",
+        "var_type": null,
+        "name": null,
+        "value": null,
+        "lit_type": null,
+        "type": "int",
+        "symbol": null,
+        "error": false
+       }
+      ],
+      "operator": "+",
+      "var_type": null,
+      "name": null,
+      "value": null,
+      "lit_type": null,
+      "type": "int",
+      "symbol": null,
+      "error": false
+     }
+    ],
+    "operator": null,
+    "var_type": "int",
+    "name": "c",
+    "value": null,
+    "lit_type": null,
+    "type": null,
+    "symbol": "sym_c_global",
+    "error": false
+   },
+   {
+    "id": "ast_11",
+    "kind": "Print",
+    "span": {
+     "start": 43,
+     "end": 52,
+     "line": 4,
+     "col": 1,
+     "end_line": 4,
+     "end_col": 10
+    },
+    "origin": [
+     "tok_19",
+     "tok_20",
+     "tok_22",
+     "tok_23"
+    ],
+    "children": [
+     {
+      "id": "ast_10",
+      "kind": "Var",
+      "span": {
+       "start": 49,
+       "end": 50,
+       "line": 4,
+       "col": 7,
+       "end_line": 4,
+       "end_col": 8
+      },
+      "origin": [
+       "tok_21"
+      ],
+      "children": [],
+      "operator": null,
+      "var_type": null,
+      "name": "c",
+      "value": null,
+      "lit_type": null,
+      "type": "int",
+      "symbol": "sym_c_global",
+      "error": false
+     }
+    ],
+    "operator": null,
+    "var_type": null,
+    "name": null,
+    "value": null,
+    "lit_type": null,
+    "type": null,
+    "symbol": null,
+    "error": false
+   }
+  ],
+  "operator": null,
+  "var_type": null,
+  "name": null,
+  "value": null,
+  "lit_type": null,
+  "type": null,
+  "symbol": null,
+  "error": false
+ },
+ "symbols": [
+  {
+   "id": "sym_a_global",
+   "name": "a",
+   "type": "int",
+   "scope": "global",
+   "decl": "ast_1",
+   "uses": [
+    "ast_4"
+   ],
+   "initialized": true,
+   "tac_name": "a",
+   "span": {
+    "start": 4,
+    "end": 5,
+    "line": 1,
+    "col": 5,
+    "end_line": 1,
+    "end_col": 6
+   },
+   "origin": [
+    "ast_1"
+   ]
+  },
+  {
+   "id": "sym_b_global",
+   "name": "b",
+   "type": "int",
+   "scope": "global",
+   "decl": "ast_3",
+   "uses": [
+    "ast_5"
+   ],
+   "initialized": true,
+   "tac_name": "b",
+   "span": {
+    "start": 16,
+    "end": 17,
+    "line": 2,
+    "col": 5,
+    "end_line": 2,
+    "end_col": 6
+   },
+   "origin": [
+    "ast_3"
+   ]
+  },
+  {
+   "id": "sym_c_global",
+   "name": "c",
+   "type": "int",
+   "scope": "global",
+   "decl": "ast_9",
+   "uses": [
+    "ast_10"
+   ],
+   "initialized": true,
+   "tac_name": "c",
+   "span": {
+    "start": 28,
+    "end": 29,
+    "line": 3,
+    "col": 5,
+    "end_line": 3,
+    "end_col": 6
+   },
+   "origin": [
+    "ast_9"
+   ]
+  }
+ ],
+ "diagnostics": [],
+ "tac": [
+  {
+   "id": "tac_0",
+   "op": "copy",
+   "dest": "a",
+   "a": "10",
+   "b": null,
+   "operator": null,
+   "label": null,
+   "ty": null,
+   "span": {
+    "start": 0,
+    "end": 11,
+    "line": 1,
+    "col": 1,
+    "end_line": 1,
+    "end_col": 12
+   },
+   "origin": [
+    "ast_1"
+   ],
+   "text": "a = 10"
+  },
+  {
+   "id": "tac_1",
+   "op": "copy",
+   "dest": "b",
+   "a": "20",
+   "b": null,
+   "operator": null,
+   "label": null,
+   "ty": null,
+   "span": {
+    "start": 12,
+    "end": 23,
+    "line": 2,
+    "col": 1,
+    "end_line": 2,
+    "end_col": 12
+   },
+   "origin": [
+    "ast_3"
+   ],
+   "text": "b = 20"
+  },
+  {
+   "id": "tac_2",
+   "op": "binop",
+   "dest": "t1",
+   "a": "b",
+   "b": "2",
+   "operator": "*",
+   "label": null,
+   "ty": "int",
+   "span": {
+    "start": 36,
+    "end": 41,
+    "line": 3,
+    "col": 13,
+    "end_line": 3,
+    "end_col": 18
+   },
+   "origin": [
+    "ast_7"
+   ],
+   "text": "t1 = b * 2"
+  },
+  {
+   "id": "tac_3",
+   "op": "binop",
+   "dest": "t2",
+   "a": "a",
+   "b": "t1",
+   "operator": "+",
+   "label": null,
+   "ty": "int",
+   "span": {
+    "start": 32,
+    "end": 41,
+    "line": 3,
+    "col": 9,
+    "end_line": 3,
+    "end_col": 18
+   },
+   "origin": [
+    "ast_8"
+   ],
+   "text": "t2 = a + t1"
+  },
+  {
+   "id": "tac_4",
+   "op": "copy",
+   "dest": "c",
+   "a": "t2",
+   "b": null,
+   "operator": null,
+   "label": null,
+   "ty": null,
+   "span": {
+    "start": 24,
+    "end": 42,
+    "line": 3,
+    "col": 1,
+    "end_line": 3,
+    "end_col": 19
+   },
+   "origin": [
+    "ast_9"
+   ],
+   "text": "c = t2"
+  },
+  {
+   "id": "tac_5",
+   "op": "print",
+   "dest": null,
+   "a": "c",
+   "b": null,
+   "operator": null,
+   "label": null,
+   "ty": null,
+   "span": {
+    "start": 43,
+    "end": 52,
+    "line": 4,
+    "col": 1,
+    "end_line": 4,
+    "end_col": 10
+   },
+   "origin": [
+    "ast_11"
+   ],
+   "text": "print c"
+  }
+ ],
+ "optimized": {
+  "tac": [
+   {
+    "id": "tac_0",
+    "op": "copy",
+    "dest": "a",
+    "a": "10",
+    "b": null,
+    "operator": null,
+    "label": null,
+    "ty": null,
+    "span": {
+     "start": 0,
+     "end": 11,
+     "line": 1,
+     "col": 1,
+     "end_line": 1,
+     "end_col": 12
+    },
+    "origin": [
+     "ast_1"
+    ],
+    "text": "a = 10"
+   },
+   {
+    "id": "tac_1",
+    "op": "copy",
+    "dest": "b",
+    "a": "20",
+    "b": null,
+    "operator": null,
+    "label": null,
+    "ty": null,
+    "span": {
+     "start": 12,
+     "end": 23,
+     "line": 2,
+     "col": 1,
+     "end_line": 2,
+     "end_col": 12
+    },
+    "origin": [
+     "ast_3"
+    ],
+    "text": "b = 20"
+   },
+   {
+    "id": "opt_5",
+    "op": "copy",
+    "dest": "c",
+    "a": "50",
+    "b": null,
+    "operator": null,
+    "label": null,
+    "ty": "int",
+    "span": {
+     "start": 24,
+     "end": 42,
+     "line": 3,
+     "col": 1,
+     "end_line": 3,
+     "end_col": 19
+    },
+    "origin": [
+     "opt_4"
+    ],
+    "text": "c = 50"
+   },
+   {
+    "id": "opt_6",
+    "op": "print",
+    "dest": null,
+    "a": "50",
+    "b": null,
+    "operator": null,
+    "label": null,
+    "ty": null,
+    "span": {
+     "start": 43,
+     "end": 52,
+     "line": 4,
+     "col": 1,
+     "end_line": 4,
+     "end_col": 10
+    },
+    "origin": [
+     "tac_5"
+    ],
+    "text": "print 50"
+   }
+  ],
+  "applied": [
+   {
+    "id": "app_0",
+    "rule_id": "OPT_CONST_PROP",
+    "before": [
+     "tac_2"
+    ],
+    "after": "opt_0",
+    "instr": {
+     "id": "opt_0",
+     "op": "binop",
+     "dest": "t1",
+     "a": "20",
+     "b": "2",
+     "operator": "*",
+     "label": null,
+     "ty": "int",
+     "span": {
+      "start": 36,
+      "end": 41,
+      "line": 3,
+      "col": 13,
+      "end_line": 3,
+      "end_col": 18
+     },
+     "origin": [
+      "tac_2"
+     ],
+     "text": "t1 = 20 * 2"
+    },
+    "explanation": {
+     "rule_id": "OPT_CONST_PROP",
+     "title": "Constant propagation",
+     "reason": "Inside this basic block 'b' always holds 20, so the use is replaced by the constant.",
+     "detail": {
+      "concept": "Constant propagation within a basic block",
+      "before": "t1 = b * 2",
+      "after": "t1 = 20 * 2"
+     },
+     "origin": [
+      "opt_0"
+     ],
+     "span": {
+      "start": 36,
+      "end": 41,
+      "line": 3,
+      "col": 13,
+      "end_line": 3,
+      "end_col": 18
+     }
+    }
+   },
+   {
+    "id": "app_1",
+    "rule_id": "OPT_CONST_PROP",
+    "before": [
+     "tac_3"
+    ],
+    "after": "opt_1",
+    "instr": {
+     "id": "opt_1",
+     "op": "binop",
+     "dest": "t2",
+     "a": "10",
+     "b": "t1",
+     "operator": "+",
+     "label": null,
+     "ty": "int",
+     "span": {
+      "start": 32,
+      "end": 41,
+      "line": 3,
+      "col": 9,
+      "end_line": 3,
+      "end_col": 18
+     },
+     "origin": [
+      "tac_3"
+     ],
+     "text": "t2 = 10 + t1"
+    },
+    "explanation": {
+     "rule_id": "OPT_CONST_PROP",
+     "title": "Constant propagation",
+     "reason": "Inside this basic block 'a' always holds 10, so the use is replaced by the constant.",
+     "detail": {
+      "concept": "Constant propagation within a basic block",
+      "before": "t2 = a + t1",
+      "after": "t2 = 10 + t1"
+     },
+     "origin": [
+      "opt_1"
+     ],
+     "span": {
+      "start": 32,
+      "end": 41,
+      "line": 3,
+      "col": 9,
+      "end_line": 3,
+      "end_col": 18
+     }
+    }
+   },
+   {
+    "id": "app_2",
+    "rule_id": "OPT_COPY_PROP",
+    "before": [
+     "opt_1",
+     "tac_4"
+    ],
+    "after": "opt_2",
+    "instr": {
+     "id": "opt_2",
+     "op": "binop",
+     "dest": "c",
+     "a": "10",
+     "b": "t1",
+     "operator": "+",
+     "label": null,
+     "ty": "int",
+     "span": {
+      "start": 24,
+      "end": 42,
+      "line": 3,
+      "col": 1,
+      "end_line": 3,
+      "end_col": 19
+     },
+     "origin": [
+      "opt_1",
+      "tac_4"
+     ],
+     "text": "c = 10 + t1"
+    },
+    "explanation": {
+     "rule_id": "OPT_COPY_PROP",
+     "title": "Copy propagation",
+     "reason": "Temporary t2 is read only by 'c = t2', so the computation is assigned directly to c.",
+     "detail": {
+      "concept": "Copy propagation and copy forwarding",
+      "before": "t2 = 10 + t1; c = t2",
+      "after": "c = 10 + t1"
+     },
+     "origin": [
+      "opt_2"
+     ],
+     "span": {
+      "start": 24,
+      "end": 42,
+      "line": 3,
+      "col": 1,
+      "end_line": 3,
+      "end_col": 19
+     }
+    }
+   },
+   {
+    "id": "app_3",
+    "rule_id": "OPT_CONST_FOLD",
+    "before": [
+     "opt_0"
+    ],
+    "after": "opt_3",
+    "instr": {
+     "id": "opt_3",
+     "op": "copy",
+     "dest": "t1",
+     "a": "40",
+     "b": null,
+     "operator": null,
+     "label": null,
+     "ty": "int",
+     "span": {
+      "start": 36,
+      "end": 41,
+      "line": 3,
+      "col": 13,
+      "end_line": 3,
+      "end_col": 18
+     },
+     "origin": [
+      "opt_0"
+     ],
+     "text": "t1 = 40"
+    },
+    "explanation": {
+     "rule_id": "OPT_CONST_FOLD",
+     "title": "Constant folding",
+     "reason": "Both operands of 't1 = 20 * 2' are known at compile time, so the result is computed now instead of at run time.",
+     "detail": {
+      "concept": "Constant folding",
+      "before": "t1 = 20 * 2",
+      "after": "t1 = 40"
+     },
+     "origin": [
+      "opt_3"
+     ],
+     "span": {
+      "start": 36,
+      "end": 41,
+      "line": 3,
+      "col": 13,
+      "end_line": 3,
+      "end_col": 18
+     }
+    }
+   },
+   {
+    "id": "app_4",
+    "rule_id": "OPT_CONST_PROP",
+    "before": [
+     "opt_2"
+    ],
+    "after": "opt_4",
+    "instr": {
+     "id": "opt_4",
+     "op": "binop",
+     "dest": "c",
+     "a": "10",
+     "b": "40",
+     "operator": "+",
+     "label": null,
+     "ty": "int",
+     "span": {
+      "start": 24,
+      "end": 42,
+      "line": 3,
+      "col": 1,
+      "end_line": 3,
+      "end_col": 19
+     },
+     "origin": [
+      "opt_2"
+     ],
+     "text": "c = 10 + 40"
+    },
+    "explanation": {
+     "rule_id": "OPT_CONST_PROP",
+     "title": "Constant propagation",
+     "reason": "Inside this basic block 't1' always holds 40, so the use is replaced by the constant.",
+     "detail": {
+      "concept": "Constant propagation within a basic block",
+      "before": "c = 10 + t1",
+      "after": "c = 10 + 40"
+     },
+     "origin": [
+      "opt_4"
+     ],
+     "span": {
+      "start": 24,
+      "end": 42,
+      "line": 3,
+      "col": 1,
+      "end_line": 3,
+      "end_col": 19
+     }
+    }
+   },
+   {
+    "id": "app_5",
+    "rule_id": "OPT_DEAD_CODE",
+    "before": [
+     "opt_3"
+    ],
+    "after": null,
+    "instr": null,
+    "explanation": {
+     "rule_id": "OPT_DEAD_CODE",
+     "title": "Dead code elimination",
+     "reason": "Temporary 't1' is assigned but never read, so 't1 = 40' has no effect and is removed.",
+     "detail": {
+      "concept": "Dead code elimination (liveness of temporaries)",
+      "before": "t1 = 40",
+      "after": "(removed)"
+     },
+     "origin": [
+      "opt_3"
+     ],
+     "span": {
+      "start": 36,
+      "end": 41,
+      "line": 3,
+      "col": 13,
+      "end_line": 3,
+      "end_col": 18
+     }
+    }
+   },
+   {
+    "id": "app_6",
+    "rule_id": "OPT_CONST_FOLD",
+    "before": [
+     "opt_4"
+    ],
+    "after": "opt_5",
+    "instr": {
+     "id": "opt_5",
+     "op": "copy",
+     "dest": "c",
+     "a": "50",
+     "b": null,
+     "operator": null,
+     "label": null,
+     "ty": "int",
+     "span": {
+      "start": 24,
+      "end": 42,
+      "line": 3,
+      "col": 1,
+      "end_line": 3,
+      "end_col": 19
+     },
+     "origin": [
+      "opt_4"
+     ],
+     "text": "c = 50"
+    },
+    "explanation": {
+     "rule_id": "OPT_CONST_FOLD",
+     "title": "Constant folding",
+     "reason": "Both operands of 'c = 10 + 40' are known at compile time, so the result is computed now instead of at run time.",
+     "detail": {
+      "concept": "Constant folding",
+      "before": "c = 10 + 40",
+      "after": "c = 50"
+     },
+     "origin": [
+      "opt_5"
+     ],
+     "span": {
+      "start": 24,
+      "end": 42,
+      "line": 3,
+      "col": 1,
+      "end_line": 3,
+      "end_col": 19
+     }
+    }
+   },
+   {
+    "id": "app_7",
+    "rule_id": "OPT_CONST_PROP",
+    "before": [
+     "tac_5"
+    ],
+    "after": "opt_6",
+    "instr": {
+     "id": "opt_6",
+     "op": "print",
+     "dest": null,
+     "a": "50",
+     "b": null,
+     "operator": null,
+     "label": null,
+     "ty": null,
+     "span": {
+      "start": 43,
+      "end": 52,
+      "line": 4,
+      "col": 1,
+      "end_line": 4,
+      "end_col": 10
+     },
+     "origin": [
+      "tac_5"
+     ],
+     "text": "print 50"
+    },
+    "explanation": {
+     "rule_id": "OPT_CONST_PROP",
+     "title": "Constant propagation",
+     "reason": "Inside this basic block 'c' always holds 50, so the use is replaced by the constant.",
+     "detail": {
+      "concept": "Constant propagation within a basic block",
+      "before": "print c",
+      "after": "print 50"
+     },
+     "origin": [
+      "opt_6"
+     ],
+     "span": {
+      "start": 43,
+      "end": 52,
+      "line": 4,
+      "col": 1,
+      "end_line": 4,
+      "end_col": 10
+     }
+    }
+   }
+  ]
+ },
+ "phases": {
+  "lexer": "ok",
+  "parser": "ok",
+  "semantic": "ok",
+  "ir": "ok",
+  "optimizer": "ok"
+ }
+}

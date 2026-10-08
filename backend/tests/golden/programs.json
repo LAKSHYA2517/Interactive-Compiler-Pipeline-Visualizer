@@ -1,0 +1,12 @@
+{
+  "demo": "int a = 10; int b = 20; int c = a + b * 2; print(c);",
+  "undeclared": "int a; b = 10;",
+  "mismatch": "int a; a = 10.5;",
+  "redeclared": "int a = 1; int a = 2;",
+  "cond": "int x = 5; if (x) { x = 1; }",
+  "fold_alg": "int t = 10 * 2; int u = t + 0;",
+  "ifelse": "int a = 1; int b = 2; int c; if (a < b) { c = a; } else { c = b; }",
+  "while": "int i = 0; while (i < 3) { i = i + 1; }",
+  "syntax": "int a = ;",
+  "shadow": "int a = 1; { int a = 2; print(a); } print(a);"
+}
