@@ -15,7 +15,7 @@ export default function SlrView({ table, run }: { table: SlrTable; run: SlrRun |
   const row = useRef<HTMLTableRowElement>(null);
   useEffect(() => { row.current?.scrollIntoView({ block: "nearest" }); }, [state, k]);
   return (
-    <div className="p-2 text-sm">
+    <div className="min-w-0 p-2 text-sm">
       {run && (
         <>
           <div className="flex items-center gap-2">
@@ -35,11 +35,11 @@ export default function SlrView({ table, run }: { table: SlrTable; run: SlrRun |
           <b>{table.conflicts.length} conflict(s)</b>
           {table.conflicts.map((c, i) => <div key={i}>state {c.state}, '{c.symbol}': {c.kind} ({c.actions.join(" / ")})<div className="pl-3 text-slate-500">{c.items.join(" ; ")}</div></div>)}
         </div>)}
-      <div className="mt-2 text-xs text-slate-500">FIRST/FOLLOW of nonterminals</div>
+      <details className="mt-2"><summary className="cursor-pointer text-xs text-slate-500">FIRST/FOLLOW of nonterminals</summary>
       <table className="mb-3 text-xs"><tbody>
         {Object.keys(table.first).map((n) => <tr key={n}><td className="td font-mono">{n}</td><td className="td">FIRST {"{"}{table.first[n].join(", ")}{"}"}</td><td className="td">FOLLOW {"{"}{(table.follow[n] ?? []).join(", ")}{"}"}</td></tr>)}
-      </tbody></table>
-      <div className="max-h-96 overflow-auto">
+      </tbody></table></details>
+      <div className="mt-2 max-h-[55vh] overflow-auto rounded border border-slate-200 dark:border-slate-800">
         <table className="text-xs">
           <thead><tr><th className="th">state</th>{terms.map((t) => <th key={t} className="th">{t}</th>)}{nts.map((t) => <th key={t} className="th text-accent">{t}</th>)}</tr></thead>
           <tbody>

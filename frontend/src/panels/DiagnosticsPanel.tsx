@@ -5,7 +5,7 @@ export default function DiagnosticsPanel({ compact = false }: { compact?: boolea
   const { response, showInSource } = useStore();
   const hl = useHl();
   const ds = response?.diagnostics ?? [];
-  if (!ds.length) return compact ? <div className="px-3 py-1 text-xs text-slate-500">{response ? "No diagnostics ✓" : "Not compiled yet"}</div> : <Empty>No diagnostics.</Empty>;
+  if (!ds.length) return compact ? <div className="px-3 py-1 text-xs text-slate-500">{response ? "No diagnostics ✓" : "Not compiled yet"}</div> : <Empty>{response ? "✓ No errors or warnings. Try an error such as `b = 10;` (undeclared) or `int a; a = 1.5;` (type mismatch) to see diagnostics with Why? cards." : "Compile first."}</Empty>;
   return (
     <ul className={compact ? "flex flex-wrap gap-x-6 gap-y-1 px-3 py-1" : ""}>
       {ds.map((d) => (

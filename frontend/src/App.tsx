@@ -40,7 +40,7 @@ function Workbench({ dark }: { dark: boolean }) {
   const { tab, setTab, run, loading, error, optimize, setOptimize, passes, togglePass } = useStore();
   const Panel = TABS[tab];
   return (
-    <div className="grid min-h-0 flex-1 grid-cols-[minmax(320px,2fr)_3fr]">
+    <div className="grid min-h-0 flex-1 grid-cols-[minmax(320px,2fr)_minmax(0,3fr)]">
       <div className="flex min-h-0 flex-col border-r border-slate-200 dark:border-slate-800">
         <div className="flex flex-wrap items-center gap-3 border-b border-slate-200 p-2 dark:border-slate-800">
           <button className="btn" onClick={run} disabled={loading}>{loading ? "Compiling…" : "Compile"}</button>
@@ -54,12 +54,12 @@ function Workbench({ dark }: { dark: boolean }) {
         </div>
         <div className="min-h-0 flex-1"><Editor dark={dark} /></div>
       </div>
-      <div className="flex min-h-0 flex-col">
+      <div className="flex min-h-0 min-w-0 flex-col">
         <div className="flex flex-wrap border-b border-slate-200 dark:border-slate-800">
           {Object.keys(TABS).map((t) => (
             <button key={t} onClick={() => setTab(t)} className={`px-3 py-2 text-sm ${t === tab ? "border-b-2 border-accent font-medium text-accent" : "text-slate-500"}`}>{t}</button>))}
         </div>
-        <div className="min-h-0 flex-1 overflow-auto"><Panel /></div>
+        <div className="min-h-0 min-w-0 flex-1 overflow-auto"><Panel /></div>
       </div>
     </div>
   );
