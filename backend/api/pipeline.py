@@ -1,9 +1,11 @@
 """Composes phase functions. Errors stop the pipeline; warnings do not."""
+from ..codegen.asm_gen import generate_asm
 from ..common.ids import IdGen
 from ..ir.tac_gen import generate
 from ..lexer.tokenizer import tokenize
 from ..optimizer.driver import optimize
 from ..parser.ll1_parser import parse
+from ..semantic.symbol_table import temp_symbols
 from ..semantic.type_checker import analyze
 from .schemas import CompileResponse, Optimized, PhaseStatus
 
@@ -37,10 +39,15 @@ def compile_source(source: str, do_opt: bool = False, passes: list[str] | None =
     if stop("ir"):
         return r
     r.tac = generate(ps.ast, sm.symbols, ids)
+    r.symbols = r.symbols + temp_symbols(r.tac)
     ph.ir = "ok"
     if do_opt and not stop("optimizer"):
         o = optimize(r.tac, passes, ids)
         r.optimized = Optimized(tac=o.tac, applied=o.applied)
         ph.optimizer = "ok"
+    if until == "optimizer":
+        final = r.optimized.tac if r.optimized else r.tac
+        r.asm, r.asm_from = generate_asm(final, r.symbols, ids), "optimized" if r.optimized else "tac"
+        ph.codegen = "ok"
     r.ok = not failed()
     return r

@@ -20,7 +20,7 @@ Monaco loads from a CDN, so the first page load needs internet. `VITE_USE_MOCK=1
 ## Layout
 
 `backend/` common (spans, ids, diagnostics, explanations), lexer (+ regex/NFA/DFA), parser (recursive descent + SLR(1)),
-semantic, ir (TAC), optimizer, vm (TAC interpreter used by tests), api. `frontend/src/lib/lineage.ts` is the provenance graph.
+semantic, ir (TAC), optimizer, codegen (assembly), vm (TAC interpreter used by tests), api. `frontend/src/lib/lineage.ts` is the provenance graph.
 Docs: `docs/MINILANG.md`, `docs/DECISIONS.md`, `docs/API_CONTRACT.md` (`make contract` dumps the full OpenAPI).
 
 Demo: paste `int a = 10; int b = 20; int c = a + b * 2; print(c);`, Compile, click `*` in the AST; click TAC `c = t2`;

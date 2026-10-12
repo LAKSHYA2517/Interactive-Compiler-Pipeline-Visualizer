@@ -704,7 +704,8 @@
    },
    "origin": [
     "ast_1"
-   ]
+   ],
+   "kind": "variable"
   },
   {
    "id": "sym_b_global",
@@ -727,7 +728,8 @@
    },
    "origin": [
     "ast_3"
-   ]
+   ],
+   "kind": "variable"
   },
   {
    "id": "sym_c_global",
@@ -750,7 +752,56 @@
    },
    "origin": [
     "ast_9"
-   ]
+   ],
+   "kind": "variable"
+  },
+  {
+   "id": "sym_t1_temp",
+   "name": "t1",
+   "type": "int",
+   "scope": "temp",
+   "decl": "tac_2",
+   "uses": [
+    "tac_3"
+   ],
+   "initialized": true,
+   "tac_name": "t1",
+   "span": {
+    "start": 36,
+    "end": 41,
+    "line": 3,
+    "col": 13,
+    "end_line": 3,
+    "end_col": 18
+   },
+   "origin": [
+    "tac_2"
+   ],
+   "kind": "temp"
+  },
+  {
+   "id": "sym_t2_temp",
+   "name": "t2",
+   "type": "int",
+   "scope": "temp",
+   "decl": "tac_3",
+   "uses": [
+    "tac_4"
+   ],
+   "initialized": true,
+   "tac_name": "t2",
+   "span": {
+    "start": 32,
+    "end": 41,
+    "line": 3,
+    "col": 9,
+    "end_line": 3,
+    "end_col": 18
+   },
+   "origin": [
+    "tac_3"
+   ],
+   "kind": "temp"
   }
  ],
  "diagnostics": [],
@@ -1371,11 +1422,253 @@
    }
   ]
  },
+ "asm": [
+  {
+   "id": "asm_0",
+   "kind": "directive",
+   "text": ".data",
+   "comment": "",
+   "span": {
+    "start": 4,
+    "end": 5,
+    "line": 1,
+    "col": 5,
+    "end_line": 1,
+    "end_col": 6
+   },
+   "origin": [
+    "sym_a_global"
+   ]
+  },
+  {
+   "id": "asm_1",
+   "kind": "directive",
+   "text": "a: .word 0",
+   "comment": "int a",
+   "span": {
+    "start": 4,
+    "end": 5,
+    "line": 1,
+    "col": 5,
+    "end_line": 1,
+    "end_col": 6
+   },
+   "origin": [
+    "sym_a_global"
+   ]
+  },
+  {
+   "id": "asm_2",
+   "kind": "directive",
+   "text": "b: .word 0",
+   "comment": "int b",
+   "span": {
+    "start": 16,
+    "end": 17,
+    "line": 2,
+    "col": 5,
+    "end_line": 2,
+    "end_col": 6
+   },
+   "origin": [
+    "sym_b_global"
+   ]
+  },
+  {
+   "id": "asm_3",
+   "kind": "directive",
+   "text": "c: .word 0",
+   "comment": "int c",
+   "span": {
+    "start": 28,
+    "end": 29,
+    "line": 3,
+    "col": 5,
+    "end_line": 3,
+    "end_col": 6
+   },
+   "origin": [
+    "sym_c_global"
+   ]
+  },
+  {
+   "id": "asm_4",
+   "kind": "directive",
+   "text": ".text",
+   "comment": "",
+   "span": {
+    "start": 0,
+    "end": 11,
+    "line": 1,
+    "col": 1,
+    "end_line": 1,
+    "end_col": 12
+   },
+   "origin": [
+    "tac_0"
+   ]
+  },
+  {
+   "id": "asm_5",
+   "kind": "instr",
+   "text": "MOV R1, 10",
+   "comment": "a = 10",
+   "span": {
+    "start": 0,
+    "end": 11,
+    "line": 1,
+    "col": 1,
+    "end_line": 1,
+    "end_col": 12
+   },
+   "origin": [
+    "tac_0"
+   ]
+  },
+  {
+   "id": "asm_6",
+   "kind": "instr",
+   "text": "ST a, R1",
+   "comment": "",
+   "span": {
+    "start": 0,
+    "end": 11,
+    "line": 1,
+    "col": 1,
+    "end_line": 1,
+    "end_col": 12
+   },
+   "origin": [
+    "tac_0"
+   ]
+  },
+  {
+   "id": "asm_7",
+   "kind": "instr",
+   "text": "MOV R1, 20",
+   "comment": "b = 20",
+   "span": {
+    "start": 12,
+    "end": 23,
+    "line": 2,
+    "col": 1,
+    "end_line": 2,
+    "end_col": 12
+   },
+   "origin": [
+    "tac_1"
+   ]
+  },
+  {
+   "id": "asm_8",
+   "kind": "instr",
+   "text": "ST b, R1",
+   "comment": "",
+   "span": {
+    "start": 12,
+    "end": 23,
+    "line": 2,
+    "col": 1,
+    "end_line": 2,
+    "end_col": 12
+   },
+   "origin": [
+    "tac_1"
+   ]
+  },
+  {
+   "id": "asm_9",
+   "kind": "instr",
+   "text": "MOV R1, 50",
+   "comment": "c = 50",
+   "span": {
+    "start": 24,
+    "end": 42,
+    "line": 3,
+    "col": 1,
+    "end_line": 3,
+    "end_col": 19
+   },
+   "origin": [
+    "opt_5"
+   ]
+  },
+  {
+   "id": "asm_10",
+   "kind": "instr",
+   "text": "ST c, R1",
+   "comment": "",
+   "span": {
+    "start": 24,
+    "end": 42,
+    "line": 3,
+    "col": 1,
+    "end_line": 3,
+    "end_col": 19
+   },
+   "origin": [
+    "opt_5"
+   ]
+  },
+  {
+   "id": "asm_11",
+   "kind": "instr",
+   "text": "MOV R1, 50",
+   "comment": "print 50",
+   "span": {
+    "start": 43,
+    "end": 52,
+    "line": 4,
+    "col": 1,
+    "end_line": 4,
+    "end_col": 10
+   },
+   "origin": [
+    "opt_6"
+   ]
+  },
+  {
+   "id": "asm_12",
+   "kind": "instr",
+   "text": "PRINT R1",
+   "comment": "",
+   "span": {
+    "start": 43,
+    "end": 52,
+    "line": 4,
+    "col": 1,
+    "end_line": 4,
+    "end_col": 10
+   },
+   "origin": [
+    "opt_6"
+   ]
+  },
+  {
+   "id": "asm_13",
+   "kind": "instr",
+   "text": "HALT",
+   "comment": "",
+   "span": {
+    "start": 43,
+    "end": 52,
+    "line": 4,
+    "col": 1,
+    "end_line": 4,
+    "end_col": 10
+   },
+   "origin": [
+    "opt_6"
+   ]
+  }
+ ],
+ "asm_from": "optimized",
  "phases": {
   "lexer": "ok",
   "parser": "ok",
   "semantic": "ok",
   "ir": "ok",
-  "optimizer": "ok"
+  "optimizer": "ok",
+  "codegen": "ok"
  }
 }

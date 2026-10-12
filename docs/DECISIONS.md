@@ -15,3 +15,8 @@
 - Constant folding does not fold `if_goto` with constant conditions; dead-code removal only deletes temporaries.
 - Frontend uses React 18, Tailwind v4, hash routing (`#/learn`) instead of a router library.
 - Regex classes do not support negation (`[^..]`) or `.`; empty-regex/unbalanced input returns HTTP 422.
+- Symbol table also lists TAC temporaries (`kind: "temp"`, scope `temp`, decl = defining TAC id, uses = reading TAC ids), appended after TAC generation.
+- Code generation (not in the original brief): `codegen/asm_gen.py` emits assembly for a small register machine from the optimized TAC (or plain TAC when optimization is off).
+  Naive strategy: R1/R2 scratch, all variables and temporaries live in memory (`.data`), `ITOF` for int/float mixing, `F`-prefixed float ops.
+  Each assembly line has `origin = [TAC id]` so lineage reaches the source. `vm/asm_sim.py` runs the text in tests and must match the TAC interpreter.
+- The assembly is for this teaching ISA, not x86/ARM; real-machine back ends would need register allocation and calling conventions.

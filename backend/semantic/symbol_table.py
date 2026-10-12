@@ -15,6 +15,7 @@ class Symbol(BaseModel):
     tac_name: str        # name used in IR (disambiguated when shadowing)
     span: "Span"         # declaration identifier
     origin: list[str]
+    kind: str = "variable"   # variable | temp (IR temporaries are appended after TAC generation)
 
 
 from ..common.span import Span  # noqa: E402
@@ -59,3 +60,18 @@ class ScopeStack:
         self.stack[-1][1][name] = sym
         self.symbols.append(sym)
         return sym
+
+
+def temp_symbols(tac: list) -> list[Symbol]:
+    """One symbol per TAC temporary: decl = defining instruction, uses = instructions that read it."""
+    out: dict[str, Symbol] = {}
+    for i in tac:
+        if i.dest and i.op in ("binop", "unop") and i.dest not in out:
+            out[i.dest] = Symbol(id=symbol_id(i.dest, "temp"), name=i.dest, type=i.ty or "int", scope="temp",
+                                 decl=i.id, uses=[], initialized=True, tac_name=i.dest, span=i.span,
+                                 origin=[i.id], kind="temp")
+    for i in tac:
+        for r in i.reads():
+            if r in out:
+                out[r].uses.append(i.id)
+    return list(out.values())

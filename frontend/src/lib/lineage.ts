@@ -27,6 +27,7 @@ export function buildLineage(r: CompileResponse | null): Lineage {
     r.diagnostics.forEach((d) => add("diagnostic", d, d.origin));
     r.tac?.forEach((i) => add("tac", i, i.origin));
     r.optimized?.tac.forEach((i) => add("opt", i, i.origin));
+    r.asm?.forEach((a) => add("asm", a, a.origin));
     r.optimized?.applied.forEach((a) => {
       if (a.instr && !byId.has(a.instr.id)) add("opt", a.instr, a.instr.origin);
       add("applied", { ...a, span: a.explanation.span }, [...a.before, ...(a.after ? [a.after] : [])]);

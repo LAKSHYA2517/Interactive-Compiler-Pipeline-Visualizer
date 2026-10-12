@@ -4,6 +4,7 @@ from typing import Optional
 from pydantic import BaseModel
 
 from ..common.diagnostics import Diagnostic
+from ..codegen.asm_gen import AsmLine
 from ..ir.tac import Instr
 from ..lexer.dfa import DfaResult
 from ..lexer.tokenizer import Token
@@ -50,6 +51,7 @@ class PhaseStatus(BaseModel):
     semantic: str = "skipped"
     ir: str = "skipped"
     optimizer: str = "skipped"
+    codegen: str = "skipped"
 
 
 class CompileResponse(BaseModel):
@@ -61,6 +63,8 @@ class CompileResponse(BaseModel):
     diagnostics: list[Diagnostic] = []
     tac: Optional[list[Instr]] = None
     optimized: Optional[Optimized] = None
+    asm: Optional[list[AsmLine]] = None          # assembly for optimized TAC if present, else plain TAC
+    asm_from: Optional[str] = None               # "optimized" | "tac"
     phases: PhaseStatus = PhaseStatus()
 
 

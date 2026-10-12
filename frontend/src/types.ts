@@ -14,7 +14,7 @@ export interface AstNode {
 }
 export interface Symbol {
   id: string; name: string; type: string; scope: string; decl: string; uses: string[]; initialized: boolean;
-  tac_name: string; span: Span; origin: string[];
+  tac_name: string; span: Span; origin: string[]; kind: "variable" | "temp";
 }
 export interface Instr {
   id: string; op: string; dest?: string | null; a?: string | null; b?: string | null; operator?: string | null;
@@ -23,12 +23,14 @@ export interface Instr {
 export interface Applied {
   id: string; rule_id: string; before: string[]; after: string | null; instr: Instr | null; explanation: Explanation;
 }
+export interface AsmLine { id: string; kind: "directive" | "label" | "instr"; text: string; comment: string; span: Span; origin: string[] }
 export interface Optimized { tac: Instr[]; applied: Applied[] }
 export type PhaseState = "ok" | "failed" | "skipped";
-export interface Phases { lexer: PhaseState; parser: PhaseState; semantic: PhaseState; ir: PhaseState; optimizer: PhaseState }
+export interface Phases { lexer: PhaseState; parser: PhaseState; semantic: PhaseState; ir: PhaseState; optimizer: PhaseState; codegen: PhaseState }
 export interface CompileResponse {
   ok: boolean; source: string; tokens: Token[] | null; ast: AstNode | null; symbols: Symbol[] | null;
-  diagnostics: Diagnostic[]; tac: Instr[] | null; optimized: Optimized | null; phases: Phases;
+  diagnostics: Diagnostic[]; tac: Instr[] | null; optimized: Optimized | null; asm: AsmLine[] | null; asm_from: string | null;
+  phases: Phases;
 }
 export interface DfaResult {
   nfa: { states: string[]; start: string; accept: string[]; transitions: { from: string; to: string; symbol: string }[] };

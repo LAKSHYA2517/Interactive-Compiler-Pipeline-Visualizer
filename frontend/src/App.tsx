@@ -3,6 +3,7 @@ import DfaTool from "./components/DfaTool";
 import Editor from "./components/Editor";
 import GrammarTool from "./components/GrammarTool";
 import { ExplanationCard } from "./components/common";
+import AsmPanel from "./panels/AsmPanel";
 import AstPanel from "./panels/AstPanel";
 import CfgPanel from "./panels/CfgPanel";
 import DfaPanel from "./panels/DfaPanel";
@@ -17,10 +18,10 @@ import { PASSES, useStore } from "./state/store";
 
 const TABS: Record<string, () => JSX.Element> = {
   Source: SourcePanel, Tokens: TokensPanel, "DFA/Automata": DfaPanel, AST: AstPanel, "Parsing trace": ParsePanel,
-  "Symbol table": SymbolsPanel, Diagnostics: () => <DiagnosticsPanel />, TAC: TacPanel, Optimization: OptimizationPanel, CFG: CfgPanel,
+  "Symbol table": SymbolsPanel, Diagnostics: () => <DiagnosticsPanel />, TAC: TacPanel, Optimization: OptimizationPanel, Assembly: AsmPanel, CFG: CfgPanel,
 };
 const STEPS: [string, keyof NonNullable<ReturnType<typeof useStore.getState>["response"]>["phases"]][] = [
-  ["Lexing", "lexer"], ["Parsing", "parser"], ["Semantics", "semantic"], ["IR", "ir"], ["Optimization", "optimizer"]];
+  ["Lexing", "lexer"], ["Parsing", "parser"], ["Semantics", "semantic"], ["IR", "ir"], ["Optimization", "optimizer"], ["CodeGen", "codegen"]];
 const COLOR = { ok: "bg-green-500", failed: "bg-red-500", skipped: "bg-slate-300 dark:bg-slate-700" };
 
 function Stepper() {
